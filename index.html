@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sample</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">
+            <img src="image/logo.png" alt="">
+        </a>
+        <div class="navbar_menu">
+            <ul class="navbar-item">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="section_1">
+        <div class="image_1">
+            <img src="image/nature.jpg" alt="">
+            <div class="paragraph">
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet delectus dolor voluptatem
+                    id facere, impedit, sequi natus minus, sed nam rem ut in aliquam omnis eaque quos accusantium odio
+                    magnam dolorum officia consequuntur. Quam veniam illum natus quo temporibus blanditiis nemo unde,
+                    minus quisquam cupiditate fugit quia quidem facere. Atque, quisquam quidem. Culpa aliquam eum id,
+                    vel nulla reiciendis veritatis architecto pariatur sint quasi velit atque blanditiis ex doloribus
+                    voluptas nostrum molestias! Libero quibusdam quaerat facere odio quia impedit ullam dicta distinctio
+                    doloremque neque nam a suscipit, cum at nemo vero, officia quod ea pariatur nihil possimus ratione
+                    dolorum cupiditate?</p>
+            </div>
+        </div>
+    </section>
+    <section id="section_2">
+        <h1 class="heading">about us</h1>
+        <div id="paragraph_2">
+            <p class="para_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quam dolor, blanditiis
+                enim culpa nihil aliquam accusamus fugiat qui odit id quibusdam illum nobis a repellat sequi, sint minus
+                nesciunt, cupiditate praesentium cum esse sed. Inventore alias modi quis quibusdam ipsum, iste eligendi.
+                Temporibus quia porro consequuntur earum, nobis assumenda nam labore tempora quod repellat inventore
+                dolorem recusandae saepe dolore iure eaque sed! Amet veritatis porro saepe repellat aut libero ratione
+                doloremque cum sequi reprehenderit, consectetur quos vero eos distinctio reiciendis vitae enim ab
+                repudiandae dolorem ipsa quia, atque, ut suscipit qui. Vero, voluptate. Officia sequi dolorem eos at
+                similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quam dolor, blanditiis enim
+                culpa nihil aliquam accusamus fugiat qui odit id quibusdam illum nobis a repellat sequi, sint minus
+                nesciunt, cupiditate praesentium cum esse sed. Inventore alias modi quis quibusdam ipsum, iste eligendi.
+            </p>
+        </div>
+    </section>
+    <section id="section_3">
+        <div id="paragraph_3">
+            <div class="para_3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vel sint dolore ad fugiat itaque id
+                quae placeat deleniti ratione quod sequi, corrupti rerum quas sunt eligendi deserunt, dolor eveniet?
+                Velit hic temporibus voluptas illo. Suscipit sed temporibus, praesentium eveniet ducimus ullam. Dolore
+                earum delectus quasi. Id ad neque adipisci earum. Sunt, quos veniam autem voluptatibus, assumenda
+                exercitationem ad ipsa dolores laudantium alias architecto! Animi facere laudantium tempore neque ipsa
+                laborum labore eum, distinctio illo reprehenderit incidunt odit dolor cum earum asperiores omnis
+                recusandae? Rerum soluta ab eaque maiores recusandae voluptatibus accusantium porro! Eaque, est! Nihil
+                hic velit id assumenda?
+            </div>
+            <div class="image_2">
+                <img src="image/nature.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="section_4">
+        <div class="carousel">
+            <div class="mySlides fade">
+                <img src="image/bg_1.jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="image/bg_2.jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="image/bg_3.jpg" alt="">
+            </div>
+            <a class="prev" onclick="slides(-1)">&#10094;</a>
+            <a class="next" onclick="slides(1)">&#10095;</a>
+        </div>
+
+    </section>
+    <section id="section_5">
+        <h1 class="heading">contact form</h1>
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="a@agmail.com">
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function slides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+    }
+
+</script>
+
+</html>
